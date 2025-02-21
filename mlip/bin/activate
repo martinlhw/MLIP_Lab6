@@ -39,10 +39,10 @@ deactivate nondestructive
 if [ "${OSTYPE:-}" = "cygwin" ] || [ "${OSTYPE:-}" = "msys" ] ; then
     # transform D:\path\to\venv to /d/path/to/venv on MSYS
     # and to /cygdrive/d/path/to/venv on Cygwin
-    export VIRTUAL_ENV=$(cygpath /home/hyungwol/snap/snapd-desktop-integration/253/Desktop/mlip)
+    export VIRTUAL_ENV=$(cygpath /home/hyungwol/snap/snapd-desktop-integration/253/Desktop/MLIP_Lab6/mlip)
 else
     # use the path as-is
-    export VIRTUAL_ENV=/home/hyungwol/snap/snapd-desktop-integration/253/Desktop/mlip
+    export VIRTUAL_ENV=/home/hyungwol/snap/snapd-desktop-integration/253/Desktop/MLIP_Lab6/mlip
 fi
 
 _OLD_VIRTUAL_PATH="$PATH"
