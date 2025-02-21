@@ -7,6 +7,9 @@ pipeline {
                 sh '''#!/bin/bash
                 echo 'In C or Java, we can compile our program in this step'
                 echo 'In Python, we can build our package here or skip this step'
+		python3 -m venv mlip
+		source mlip/bin/activate
+		pip install -r requirements.txt
                 '''
             }
         }
