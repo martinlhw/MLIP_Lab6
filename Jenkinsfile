@@ -7,9 +7,6 @@ pipeline {
                 sh '''#!/bin/bash
                 echo 'In C or Java, we can compile our program in this step'
                 echo 'In Python, we can build our package here or skip this step'
-		python3 -m venv mlip
-		source mlip/bin/activate
-		pip install -r requirements.txt
                 '''
             }
         }
@@ -19,13 +16,12 @@ pipeline {
                 echo 'Test Step: We run testing tool like pytest here'
 
                 # TODO fill out the path to conda here
-                source mlip/bin/activate
+                source ./mlip/bin/activate
 
                 # TODO Complete the command to run pytest
                 pytest
 
-                # echo 'pytest not runned'
-                # exit 1 #comment this line after implementing Jenkinsfile
+		deactivate
                 '''
 
             }
